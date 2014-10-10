@@ -28,7 +28,7 @@ public class HomeCommandHandler implements HttpRequestHandler {
                        HttpContext httpContext) throws IOException{
         new Thread(new Runnable(){
             public void run(){
-                while (true){
+//                while (true){
                     Intent intent = new Intent();
                     intent.setAction("android.provider.SoftKeyboard.A");
                     context.sendBroadcast(intent);
@@ -38,7 +38,7 @@ public class HomeCommandHandler implements HttpRequestHandler {
                     } catch (InterruptedException e) {
                         e.printStackTrace();
                     }
-                }
+//                }
             }
         }).start();
         System.out.println(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Handling");
